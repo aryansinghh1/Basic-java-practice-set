@@ -9,7 +9,7 @@ public class Armstrong_number {
             sum += digit * digit * digit;
             n = n / 10;
         }
-System.out.println(temp == sum ? "Armstrong" : "Not Armstrong");        
+        System.out.println(temp == sum ? "Armstrong" : "Not Armstrong");
 
     }
 }
