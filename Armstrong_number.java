@@ -13,3 +13,8 @@ public class Armstrong_number {
 
     }
 }
+
+
+// int n = 232129;
+// int digit = String.valueOf(n).length();
+// System.out.println(digit);
