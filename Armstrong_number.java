@@ -1,20 +1,29 @@
+import java.util.*;
+
 public class Armstrong_number {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your number to check: ");
+        int num = sc.nextInt();
 
-        int n = 1634;
-        int temp = n;
+        int digit = String.valueOf(num).length();
+        int temp = num;
         int sum = 0;
-        while (n != 0) {
-            int digit = n % 10;
-            sum += digit * digit * digit;
-            n = n / 10;
+
+        for (int i = 0; i < digit; i++) {
+            int num2 = num % 10;
+            sum += Math.pow(num2, digit);
+            num = num / 10;
+
         }
-        System.out.println(temp == sum ? "Armstrong" : "Not Armstrong");
+
+        if (temp == sum) {
+            System.out.print("its armstrong number");
+        } else {
+            System.out.print("it is not armstrong number");
+
+        }
 
     }
+
 }
-
-
-// int n = 232129;
-// int digit = String.valueOf(n).length();
-// System.out.println(digit);
