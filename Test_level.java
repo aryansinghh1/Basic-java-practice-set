@@ -1,29 +1,24 @@
 import java.util.*;
+
 public class Test_level {
-    public static void main(String [] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your number to check: ");
         int num = sc.nextInt();
 
-        int digit = String.valueOf(num).length();
-        int temp = num;
-        int sum = 0;
+        int count = 0;
 
-        for(int i = 0; i < digit; i++){
-            int num2 = num%10;
-            sum += Math.pow(num2,digit);
-            num = num/10;
-
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+            }
         }
 
-        if(temp == sum){
-            System.out.print("its armstrong number");
+        if (count == 2) {
+            System.out.println("it is prime number");
+        } else {
+            System.out.println("it is not prime number");
         }
-        else{
-            System.out.print("it is not armstrong number");
-
-        }
-
 
     }
 }
