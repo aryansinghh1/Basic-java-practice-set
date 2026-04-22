@@ -9,16 +9,15 @@ public class Test_level {
         int count = 0;
 
         for (int i = 1; i <= num; i++) {
-            if (num % i == 0) {
+            int num2 = num%10;
+            if (num2 % i == 0) {
                 count++;
             }
+            num = num/10;
         }
 
-        if (count == 2) {
-            System.out.println("it is prime number");
-        } else {
-            System.out.println("it is not prime number");
-        }
+        System.out.println(count);
+
 
     }
 }
