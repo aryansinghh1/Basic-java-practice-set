@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class Test_level {
+public class Count_number_of_string {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your number to check: ");
@@ -10,17 +10,13 @@ public class Test_level {
 
         int count = 0;
 
-        for( int i = 0 ; i <arr.length; i++){
-            if(arr[i] != ""){
+        for(int i = 0; i < arr.length; i++) {
+            if (arr[i] != "") {
                 count++;
             }
         }
 
         System.out.print(count);
-
-
-
-
 
     }
 }
