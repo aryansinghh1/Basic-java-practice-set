@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class Test_level {
+public class Count_word_start_with_vowel {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your String to check: ");
