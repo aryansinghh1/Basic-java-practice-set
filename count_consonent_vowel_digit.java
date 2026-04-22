@@ -28,8 +28,8 @@ public class count_consonent_vowel_digit {
 
         }
 
-        System.out.println("Total consonent" + c);
-        System.out.println("Total vowel" + v);
-        System.out.println("Total digit" + d);
+        System.out.println("Total consonent: " + c);
+        System.out.println("Total vowel: " + v);
+        System.out.println("Total numbers: " + d);
     }
 }
