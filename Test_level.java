@@ -20,6 +20,5 @@ public class Test_level {
             num--;
         }
         
-            hello
     }
 }
