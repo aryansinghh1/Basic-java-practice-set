@@ -7,15 +7,9 @@ public class Practice {
         Scanner sc = new Scanner(System.in);
         String string1 = sc.nextLine();
 
-        int[] arr = new int[26];
-
-        for(int i = 0 ; i < string1.length(); i++){
-            arr[string1.charAt(i) - 'a']++;
-        }
-
-        for(int j = 0 ; j < arr.length; j++){
-            if(arr[j]>0){
-                System.out.print((char)(j+'a') +""+ arr[j]);
+        for(int i = 0 ; i< string1.length(); i++){
+            if(i%2 != 0){
+                System.out.print(string1.charAt(i));
             }
         }
 
