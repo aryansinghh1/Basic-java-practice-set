@@ -18,6 +18,6 @@ public class Prime_number {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number to check: ");
         int num = sc.nextInt();
-        System.err.println(isPrime(num));
+        System.out.println(isPrime(num));
     }
 }

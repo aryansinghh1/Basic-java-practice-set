@@ -1,28 +1,39 @@
-
-import java.util.Scanner;
+import  java.util.*;
 
 public class Practice {
+
     public static void main(String[] args) {
-        System.out.print("Enter your string: \n");
+
+        System.out.print("Enter your number: \n");
         Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
+        int num = sc.nextInt();
+        int digit = String.valueOf(num).length();
 
-        for (int i = 1; i < s.length(); i++) {
-            if (i % 2 == 0) {
-                if (isConsonent(s.charAt(i))) {
-                    System.out.print(s.charAt(i));
-                }
+        int count = 0;
 
+        for(int i = 0 ; i<digit ; i++){
+            int temp = num%10;
+            if(isPrime(temp)){
+                count++;
             }
+            num = num/10;
         }
 
+        System.out.print(count);
+        
     }
 
-    public static boolean isConsonent(char c) {
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c==' ') {
+    public static boolean isPrime(int c){
+        if(c<=1){
             return false;
+        }
+        else{
+            for ( int i = 2 ; i*i <= c ; i++){
+                if(c%i == 0){
+                    return false;
+                }
+            }
         }
         return true;
     }
-
 }
