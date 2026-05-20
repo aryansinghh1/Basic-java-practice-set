@@ -3,26 +3,26 @@ import java.util.Scanner;
 
 public class Practice {
     public static void main(String[] args) {
+        System.out.print("Enter your string: \n");
         Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine().toLowerCase();
-        String[] str = s.split(" ");
-        int count = 0;
-        for (int i = 0; i < str.length; i++) {
-            for (int j = 1; j < str[i].length(); j++) {
-                if (isVowel(str[i].charAt(j - 1)) == true && isVowel(str[i].charAt(j)) == true) {
-                    count++;
-                    break;
+        String s = sc.nextLine();
+
+        for (int i = 1; i < s.length(); i++) {
+            if (i % 2 == 0) {
+                if (isConsonent(s.charAt(i))) {
+                    System.out.print(s.charAt(i));
                 }
+
             }
         }
-        System.out.println(count);
+
     }
 
-    public static boolean isVowel(char c) {
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-            return true;
+    public static boolean isConsonent(char c) {
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c==' ') {
+            return false;
         }
-        return false;
+        return true;
     }
 
 }
