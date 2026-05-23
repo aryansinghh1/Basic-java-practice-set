@@ -14,7 +14,7 @@ public class Practice {
 
         for (int i = 0; i < str.length(); i++) {
 
-            if (Character.isLowerCase(str.charAt(i))) {
+            if (str.charAt(i)<=122 && str.charAt(i)>=97) {
                 count++;
             }
                 
