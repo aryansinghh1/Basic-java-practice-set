@@ -1,39 +1,37 @@
-import  java.util.*;
+import java.util.Scanner;
 
 public class Practice {
 
     public static void main(String[] args) {
 
-        System.out.print("Enter your number: \n");
+        System.out.println("Enter Your string: ");
         Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        int digit = String.valueOf(num).length();
 
-        int count = 0;
+        String str = sc.nextLine();
 
-        for(int i = 0 ; i<digit ; i++){
-            int temp = num%10;
-            if(isPrime(temp)){
-                count++;
-            }
-            num = num/10;
-        }
+        int c = 0;
+        int v = 0;
+        int d = 0;
 
-        System.out.print(count);
-        
-    }
+        for (int i = 0; i < str.length(); i++) {
 
-    public static boolean isPrime(int c){
-        if(c<=1){
-            return false;
-        }
-        else{
-            for ( int i = 2 ; i*i <= c ; i++){
-                if(c%i == 0){
-                    return false;
+            if (Character.isLetter(str.charAt(i))) {
+                if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o'
+                        || str.charAt(i) == 'u' || str.charAt(i) == 'A' || str.charAt(i) == 'E' || str.charAt(i) == 'O'
+                        || str.charAt(i) == 'I' || str.charAt(i) == 'U') {
+                    v++;
+                } else {
+                    c++;
                 }
             }
+            else if(Character.isDigit(str.charAt(i))){
+                d++;
+            }
         }
-        return true;
+
+        System.out.println("count of vowel: "+v);
+        System.out.println("count of consonent: "+c);
+        System.out.println("count of number: "+d);
     }
+
 }
