@@ -5,7 +5,7 @@ public class Practice {
     public static void main(String[] args) {
 
         //count number of string
-        
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter long string: ");
@@ -14,14 +14,20 @@ public class Practice {
         String str1 = sc.nextLine();
 
         String[] astr = str.split(" ");
+        String ch = "";
 
         int count = 0;
 
         for (int i = 0; i < astr.length; i++) {
-
-            if (str1.equals(astr[i])) {
+            for(int j = 0 ; j < astr[i].length(); j++){
+                if(Character.isLetter(astr[i].charAt(j))){
+                    ch = ch + astr[i].charAt(j);
+                }
+            }
+            if(ch.equals(str1)){
                 count++;
             }
+            ch = "";
         }
 
         System.out.println(count);
