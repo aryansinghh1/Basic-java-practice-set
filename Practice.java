@@ -4,28 +4,27 @@ public class Practice {
 
     public static void main(String[] args) {
 
-        // fibonacci
-        System.out.println("Enter your number: ");
+        //count number of string
+        
         Scanner sc = new Scanner(System.in);
 
-        int num = sc.nextInt();
-        int a = 0;
-        int b = 1;
+        System.out.println("Enter long string: ");
+        String str = sc.nextLine();
+        System.out.println("enter string to count: ");
+        String str1 = sc.nextLine();
 
-        for (int i = 0; i < num; i++) {
+        String[] astr = str.split(" ");
 
-            System.out.println(a);
-            int temp = a + b;
-            a = b;
-            b = temp;
+        int count = 0;
 
-            if(a>num){
-                break;
+        for (int i = 0; i < astr.length; i++) {
+
+            if (str1.equals(astr[i])) {
+                count++;
             }
-
-
         }
 
+        System.out.println(count);
     }
 
 }
