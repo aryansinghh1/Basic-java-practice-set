@@ -11,16 +11,17 @@ public class Practice {
         System.out.println("Enter Your Number: ");
 
         int num = sc.nextInt();
-        int num2 = sc.nextInt();
-
         
-        while(num2!=0){
-            int temp = num2;
-            num2 = num%num2;
-            num = temp;
-
+        int a = 0;
+        int b = 1;
+        while(num!=0){
+            System.out.print(a+" ");
+            int temp = a;
+            a = a+b;
+            b = temp;
+            num--;
         }
-        System.out.print(num);
+        
         
 
         
