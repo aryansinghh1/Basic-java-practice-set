@@ -11,18 +11,16 @@ public class Practice {
         System.out.println("Enter Your Number: ");
 
         int num = sc.nextInt();
+        int num2 = sc.nextInt();
 
-        int fact = 1;
+        
+        while(num2!=0){
+            int temp = num2;
+            num2 = num%num2;
+            num = temp;
 
-        if(num == 1){
-            System.out.println("Factorial of 1 is 1");
         }
-        else{
-            for(int i = 1 ; i<=num; i++){
-               fact = fact * i;
-            }
-        }
-        System.out.print(fact);
+        System.out.print(num);
         
 
         
