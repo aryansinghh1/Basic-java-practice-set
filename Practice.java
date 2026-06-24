@@ -8,23 +8,24 @@ public class Practice {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter string: ");
-        String str = sc.nextLine();
+        System.out.println("Enter Your Number: ");
 
-        String ch = "";
+        int num = sc.nextInt();
 
-        for (int i = 0; i < str.length(); i++) {
+        int fact = 1;
 
-            char current = str.charAt(i);
-
-            if (ch.indexOf(current) != -1) {
-                break;
-            }
-
-            ch = ch + current;
+        if(num == 1){
+            System.out.println("Factorial of 1 is 1");
         }
+        else{
+            for(int i = 1 ; i<=num; i++){
+               fact = fact * i;
+            }
+        }
+        System.out.print(fact);
+        
 
-        System.out.println(ch);
+        
     }
 
 }
