@@ -25,13 +25,13 @@ public class Practice2 {
 
         int count = 0 ;
 
-        for(int i = 1; i<primeTill ; i++){
-            if(isPrime(i) == true){
-                count++;
+        for(int i = 2; i <= primeTill ; i++){
+            if(isPrime(i)){
+               System.out.print(i + " ");
             }
         }
 
-        System.out.println("Prime in between" + primeTill + " " + count);
+        // System.out.println("Prime in between 1 and " + primeTill + " = " + count);
 
         
 
