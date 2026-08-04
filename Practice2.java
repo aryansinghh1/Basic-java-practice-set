@@ -6,18 +6,15 @@ public class Practice2 {
         System.out.println("Enter the String");
         String name = sc.nextLine().toLowerCase();
 
-        int[] arr = new int[26];
+        String ch = "";
 
-        for (int i = 0; i < name.length(); i++) {
-            char ch = name.charAt(i);
-            if (ch >= 'a' && ch <= 'z') {
-                arr[ch - 'a']++;
+        for(int i = 0 ; i<name.length(); i++){
+
+            if(ch.indexOf(name.charAt(i)) == -1){
+                ch += name.charAt(i);
             }
+
         }
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > 0) {
-                System.out.print((char) (i + 'a') + "" + arr[i]);
-            }
-        }
+        System.out.println("output: "+ ch);
     }
 }
